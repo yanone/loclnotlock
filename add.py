@@ -13,7 +13,6 @@ if not os.path.exists(LocalDictionary + '.backup'):
 
 # Read LocalDictionary
 d = Set(map(string.strip, open(LocalDictionary).readlines()))
-# Remove hashes
 length = len(d)
 
 # Add words
