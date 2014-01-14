@@ -1,0 +1,28 @@
+# General collection of words that I found in my own dictionary file
+# that I have apparently added over time.
+
+Glyph
+Glyphen
+Glyphs
+RoboFont
+RoboThon
+Autopsy
+Bézier
+Béziers
+Antithesis
+Eames
+Harmonizer
+Hinting
+Indiegogo
+Kickstarter
+Kosmik
+Logotype
+Outline
+Regular
+Serif
+Serife
+Serifen
+Serifenlos
+SplitCubicAtT
+Strings
+Webfonts
