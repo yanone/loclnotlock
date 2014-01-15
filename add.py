@@ -17,18 +17,22 @@ length = len(d)
 
 # Add words
 for fileName in os.listdir(HostedDictionaryPath):
-	if os.path.isfile(os.path.join(HostedDictionaryPath, fileName)):
+	if os.path.isfile(os.path.join(HostedDictionaryPath, fileName)) and not fileName.startswith('.'):
 		
 		print 'Reading %s' % (fileName)
 
 		# Read new words
-		newWords = map(string.strip, open(os.path.join(HostedDictionaryPath, fileName)).readlines())
+		newWords = Set(map(string.strip, open(os.path.join(HostedDictionaryPath, fileName)).readlines()))
 
 		# Remove comments and empty lines
-		newWords = [x for x in newWords if not x.startswith('#') or x != '']
+		newWords = [x for x in newWords if not x.startswith('#')]
+		newWords = [x for x in newWords if  x != '']
 	
 		# Update set
 		d.update(Set(newWords))
+
+# Sort alphabetically
+d = sorted(d)
 
 # Save back
 LocalDictionaryFile = open(LocalDictionary, 'w')
